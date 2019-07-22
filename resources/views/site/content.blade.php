@@ -262,30 +262,26 @@
         <div class="col-lg-8 wow fadeInLeft delay-06s">
           <div class="form">       
 				<!--NOTE: Update your email Id in "contact_me.php" file in order to receive emails from your contact form-->
-		<form name="sentMessage" id="contactForm"  novalidate> 
+		<form action="{{ route('home') }}" method="post" id="contactForm">
+      @csrf
 		<div class="control-group">
 		<div class="controls">
-		<input type="text" class="form-control input-text" 
-		placeholder="Full Name" id="name" required
-		data-validation-required-message="Please enter your name" />
+		<input name="name" type="text" class="form-control input-text" 
+		placeholder="Full Name" id="name"  />
 		<p class="help-block"></p>
 		</div>
 		</div> 	
 		<div class="control-group">
 		<div class="controls">
-		<input type="email" class="form-control input-text" placeholder="Email" 
-		id="email" required
-		data-validation-required-message="Please enter your email" />
+		<input name="email" type="email" class="form-control input-text" placeholder="Email" 
+		id="email" />
 		</div>
 		</div> 	
 
 		<div class="control-group">
 		<div class="controls">
-		<textarea rows="10" cols="100" class="form-control input-text" 
-		placeholder="Message" id="message" required
-		data-validation-required-message="Please enter your message" minlength="5" 
-		data-validation-minlength-message="Min 5 characters" 
-		maxlength="999" style="resize:none"></textarea>
+		<textarea name="text" rows="10" cols="100" class="form-control input-text" 
+		placeholder="Message" id="message" style="resize:none"></textarea>
 		</div>
 		</div> 		 
 		<div id="success"> </div> <!-- For success/fail messages -->
