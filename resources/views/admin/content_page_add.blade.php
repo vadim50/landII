@@ -2,7 +2,7 @@
 <div class="wrapper container-fluid">
 	<form action="{{ route('pagesAdd') }}"
 	class="form-gorizontal" method="post" enctype="multipart/form-data">
-
+	@csrf
 	<div class="form-group">
 		<label for="name" class="col-xs-2 control-label">Название:</label>
 		<div class="col-xs-8">
