@@ -4,7 +4,14 @@
 	</div>
 </div>
 <div class="portfolio">
-	<div id="filters" class="sixteen colums">
+	<div style="
+	margin-top: 10px;
+    margin-bottom: 40px;
+    text-align: center;
+    display: block;
+    float: none;
+    z-index: 2;
+    position: relative;" class="sixteen colums">
 		<ul style="padding:0px 0px 0px 0px">
 			<li>
 				<a href="{{ route('pages') }}">

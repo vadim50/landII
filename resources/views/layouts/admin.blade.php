@@ -4,7 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 <title>{{ $title }}</title>
-
+<script src="https://cdn.ckeditor.com/4.12.1/standard/ckeditor.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <link rel="icon" href="{{ asset('assets/favicon.png') }}" type="image/png">
 
 <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
@@ -54,7 +55,9 @@
 <script type="text/javascript" src="{{ asset('assets/js/jquery.nav.js') }}"></script> 
 <script type="text/javascript" src="{{ asset('assets/js/jquery.easing.1.3.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/jquery.isotope.js') }}"></script>
-<script type="text/javascript" src="{{ asset('assets/js/wow.js') }}"></script> 
+<script type="text/javascript" src="{{ asset('assets/js/wow.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/js/bootstrap-filestyle-2.1.0/src/bootstrap-filestyle.min.js') }}"> </script>
+<!-- <script type="text/javascript" src="{{ asset('assets/js/ckeditor/ckeditor.js') }}"></script> --> 
  <!-- <script src="{{ asset('assets/') }}contact/jqBootstrapValidation.js"></script>
  <script src="{{ asset('assets/') }}contact/contact_me.js"></script> -->
 <script type="text/javascript" src="{{ asset('assets/js/custom.js') }}"></script>
