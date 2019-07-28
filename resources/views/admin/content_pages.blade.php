@@ -16,12 +16,12 @@
 
 			<tr>
 				<td>{{ $page->id }}</td>
-				<td><a href="{{ route('padesEdit',['page'=>$page->id]) }}">{{ $page->name }}</a></td>
+				<td><a href="{{ route('pagesEdit',['page'=>$page->id]) }}">{{ $page->name }}</a></td>
 				<td>{{ $page->alias }}</td>
 				<td>{{ $page->text }}</td>
 				<td>{{ $page->created_at }}</td>
 				<td>
-					<form class="form-gorizontal" acion="{{ route('padesEdit',['page'=>$page->id]) }}" method="post">
+					<form class="form-gorizontal" acion="{{ route('pagesEdit',['page'=>$page->id]) }}" method="post">
 					<input type="hidden" name="action" value="delete">
 					<button class="btn btn-danger" type="submit">Delete</button>
 				</form>

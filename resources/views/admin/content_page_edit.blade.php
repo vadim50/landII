@@ -1,10 +1,11 @@
 <div class="wrapper container-fluid">
 	<form action="{{ route('pagesEdit',['page'=>$data['id']]) }}"
 		class="form-gorizontal" method="post" enctype="multipart/form-data">
+		@csrf
 		<div class="form-group">
 			<input type="hidden" name="id" value="{{ $data['id'] }}">
 			<label for="name" class="col-xs-2 control-label">Название</label>
-			<input type="text" name="text" value="{{ $data['name'] }}" class="form-control">
+			<input type="text" name="name" value="{{ $data['name'] }}" class="form-control">
 		</div>
 
 		<div class="form-group">
@@ -24,7 +25,8 @@
 		<div class="form-group">
 			<label for="old_images" class="col-xs-2 control-label">Изображение:</label>
 			<div class="col-xs-offset-2 col-xs-10">
-				<img src="{{ asset('assets/img/'.$data['images']) }}" class="img-control">
+				<img src="{{ asset('assets/img/'.$data['images']) }}" class="img-control
+				zoomIn wow animated" width="500" height="500">
 				<input type="hidden" name="old_images" value="{{ $data['images'] }}">
 			</div>
 		</div>
