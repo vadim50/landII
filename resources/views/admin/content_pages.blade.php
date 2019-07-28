@@ -21,8 +21,11 @@
 				<td>{{ $page->text }}</td>
 				<td>{{ $page->created_at }}</td>
 				<td>
-					<form class="form-gorizontal" acion="{{ route('pagesEdit',['page'=>$page->id]) }}" method="post">
-					<input type="hidden" name="action" value="delete">
+					<form class="form-gorizontal" action="{{ route('pagesEdit',['page'=>$page->id]) }}" method="post">
+						 @method('DELETE')
+							@csrf
+						<!-- <input type="hidden" name="_method" value="delete"> -->
+				
 					<button class="btn btn-danger" type="submit">Delete</button>
 				</form>
 				</td>
