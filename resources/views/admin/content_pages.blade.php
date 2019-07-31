@@ -1,5 +1,5 @@
 <div style="margin:0px 50px 0px 50px;">
-	@if(@pages)
+	@if(isset($pages))
 	<table class="table table-hover table-striped">
 		<head>
 			<tr>
