@@ -56,7 +56,7 @@ class IndexController extends Controller
     	$pages = Page::All();
     	$portfolios  = Portfolio::get(['name','filter','images']);
     	$services = Service::where('id','<',20)->get();
-    	$peoples = People::take(3)->get();
+    	$peoples = People::all();
 
     	$tags = DB::table('portfolios')->distinct()->pluck('filter');
 

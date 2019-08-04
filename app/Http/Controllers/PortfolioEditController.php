@@ -12,6 +12,11 @@ class PortfolioEditController extends Controller
     public function execute(Portfolio $portfolio, Request $request){
     	// $portfolio = Portfolio::find($id);
 
+        if($request->isMethod('delete')){
+            $portfolio->delete();
+            return redirect('admin')->with('status','Портфолио удалено!');
+        }
+
     	if($request->isMethod('post')){
     		$input = $request->except('_token');
 

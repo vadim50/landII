@@ -37,7 +37,7 @@
 
 	<div style="clear:both;"></div>
 	<div class="form-group">
-		<div class="col=xs-2 col-xs-10">
+		<div class="col-xs-2 col-xs-10">
 			<button type="submit" class="btn btn-primary" >Сохранить</button>
 		</div>
 		

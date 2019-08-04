@@ -54,9 +54,15 @@ Route::group(['prefix'=>'admin','middleware'=>'auth'],function(){
 	Route::group(['prefix'=>'service'],function(){
 
 		Route::get('/',['uses'=>'ServiceController@execute','as'=>'service']);
-		Route::match(['get','post'],'/add',['uses'=>'ServicelioAddController@execute','as'=>'serviceAdd']);
+		Route::match(['get','post'],'/add',['uses'=>'ServiceAddController@execute','as'=>'serviceAdd']);
 		Route::match(['get','post','delete'],'/edit/{service}',['uses'=>'ServiceEditController@execute','as'=>'serviceEdit']);
 
+	});
+
+	Route::group(['prefix'=>'people'],function(){
+		Route::get('/',['uses'=>'PeopleController@execute','as'=>'people']);
+		Route::match(['get','post'],'/add',['uses'=>'PeopleAddController@execute','as'=>'peopleAdd']);
+		Route::match(['get','post','delete'],'/edit/{people}',['uses'=>'PeopleEditController@execute','as'=>'peopleEdit']);
 	});
 
 });
